@@ -122,3 +122,6 @@ func decryptData(encryptedData [][]byte, privateKey *rsa.PrivateKey) []byte {
 	return decryptedData
 }
 
+func hash(data []byte) string {
+	return fmt.Sprintf("%x", sha256.Sum256(data))
+}
